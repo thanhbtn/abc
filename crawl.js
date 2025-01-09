@@ -26,11 +26,12 @@ async function fetchEvent(id) {
       const data = response.data;
       if (data?.status) {
         const title = `events id ${id} ${data?.data?.result?.title}`;
+        console.log(`${title}`);
         fs.appendFileSync('events.txt', `${title}\n`, 'utf-8');
       }
     }
   } catch (error) {
-    console.error(`Error fetching ${id}:`, error.message);
+    // console.error(`Error fetching ${id}:`, error.message);
   }
 }
 
