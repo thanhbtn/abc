@@ -41,7 +41,7 @@ async function fetchEvent(id) {
   //23603 https://ticketbox.vn/chan-troi-ruc-ro-2023-86261 https://ticketbox.vn/storii-concert-02-nguoi-giu-mua-xuan-89253
   // for (i = 23603; i <= 30703; i++) {
   // for (i = 23503; i <= 23703; i++) {
-  for (i = 23503; i <= 99999; i++) {
+  for (i = 34101; i <= 99999; i++) {
   // for (i = 23603; i >= 21603; i--) {
     // await fetchTitle("https://ticketbox.vn/chan-troi-ruc-ro-2023-"+i);
     await fetchEvent(i);
