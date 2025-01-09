@@ -3,20 +3,20 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 // Function to fetch and extract title if response is 200
-async function fetchTitle(url) {
-  try {
-    const response = await axios.get(url);
-    if (response.status === 200) {
-      const html = response.data;
-      const $ = cheerio.load(html);
-      const title = $('title').text().trim();
-      console.log(`Title fetched: url ${url} - ${title}`);
-      fs.appendFileSync('titles.txt', `${url} ${title}\n`, 'utf-8');
-    }
-  } catch (error) {
-    console.error(`Error fetching ${url}:`, error.message);
-  }
-}
+// async function fetchTitle(url) {
+//   try {
+//     const response = await axios.get(url);
+//     if (response.status === 200) {
+//       const html = response.data;
+//       const $ = cheerio.load(html);
+//       const title = $('title').text().trim();
+//       console.log(`Title fetched: url ${url} - ${title}`);
+//       fs.appendFileSync('titles.txt', `${url} ${title}\n`, 'utf-8');
+//     }
+//   } catch (error) {
+//     console.error(`Error fetching ${url}:`, error.message);
+//   }
+// }
 
 // Function to fetch and extract title if response is 200
 async function fetchEvent(id) {
@@ -31,7 +31,6 @@ async function fetchEvent(id) {
       }
     }
   } catch (error) {
-    // console.error(`Error fetching ${id}:`, error.message);
   }
 }
 
