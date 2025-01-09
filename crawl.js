@@ -44,6 +44,7 @@ async function fetchEvent(id) {
   for (i = 34101; i <= 99999; i++) {
   // for (i = 23603; i >= 21603; i--) {
     // await fetchTitle("https://ticketbox.vn/chan-troi-ruc-ro-2023-"+i);
+    console.log("i: " + i);
     await fetchEvent(i);
   }
   console.log('Crawling completed. Titles written to titles.txt');
